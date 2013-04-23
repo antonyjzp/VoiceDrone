@@ -255,21 +255,21 @@ namespace VoiceDrone
                 shape.Fill = new SolidColorBrush(color);
                 MainStage.Children.Add(shape);
 
-                try
-                {
-                    TcpClient tc = new TcpClient("server", 1800);
-                    Console.WriteLine(result.Words[0].Text + result.Words[1].Text);
-                    NetworkStream ns = tc.GetStream();
-                    StreamWriter sw = new StreamWriter(ns);
-                    sw.WriteLine(result.Words[0].Text + result.Words[1].Text);
-                    sw.Flush();
-                    StreamReader sr = new StreamReader(ns);
-                    Console.WriteLine(sr.ReadLine());
-                }
-                catch (Exception e2) 
-                { 
-                    Console.WriteLine(e2); 
-                }
+                //try
+                //{
+                //    TcpClient tc = new TcpClient("server", 1800);
+                //    Console.WriteLine(result.Words[0].Text + result.Words[1].Text);
+                //    NetworkStream ns = tc.GetStream();
+                //    StreamWriter sw = new StreamWriter(ns);
+                //    sw.WriteLine(result.Words[0].Text + result.Words[1].Text);
+                //    sw.Flush();
+                //    StreamReader sr = new StreamReader(ns);
+                //    Console.WriteLine(sr.ReadLine());
+                //}
+                //catch (Exception e2) 
+                //{ 
+                //    Console.WriteLine(e2); 
+                //}
 
             }
         }
