@@ -1,0 +1,20 @@
+﻿<Window x:Class="VoiceDrone.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:local="clr-namespace:VoiceDrone"
+       Title="Put That There">
+    <Viewbox>
+        <Canvas x:Name="MainStage" Height="1080" Width="1920" VerticalAlignment="Bottom">
+            <local:CrossHairs Canvas.Top="{Binding HandTop}" Canvas.Left="{Binding HandLeft}" />
+            <Label  Foreground="White"  Content="{Binding HypothesizedText}" Height="55"   FontSize="32" Width="965"  Canvas.Left="115" Canvas.Top="1025" />
+            <Label Foreground="Green" Content="{Binding Confidence}" Height="55"  Width="114" FontSize="32" Canvas.Left="0" Canvas.Top="1025"  />
+            <Label Foreground="Blue" Content="{Binding Position}" Height="55" Width="300" FontSize="32" Canvas.Right="0" Canvas.Top="1025" />
+            <Canvas.Background>
+                <RadialGradientBrush>
+                    <GradientStop Color="#FF696767" Offset="0" />
+                    <GradientStop Color="#FF413F3F" Offset="1" />
+                </RadialGradientBrush>
+            </Canvas.Background>
+        </Canvas>
+    </Viewbox>
+</Window>
